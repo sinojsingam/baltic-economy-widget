@@ -1,4 +1,4 @@
-#Creating a Web Widget for Indicator Comparison using ESRI ArcGIS JS SDK
+# Creating a Web Widget for Indicator Comparison using ESRI ArcGIS JS SDK
 ### Sinoj Kokulasingam
 
 For this task assignment, I chose to display the economic indices of the Baltic countries. The user could select two countries of their choosing and compare the two indicators closely.
