@@ -183,7 +183,7 @@ require(["esri/Map",
     };
     // ESRI JS SDK
     // importing the geojson file
-    const baltic_json_url = "baltic/baltic.geojson";
+    const baltic_json_url = "baltic.geojson";
     // symbology for the baltic states
     const baltic_renderer = {
         type: "simple",
