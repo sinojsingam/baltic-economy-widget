@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Baltics' Economy | Positium Task Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://js.arcgis.com/4.30/"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <center>
+        <div class="desc-container">
+            <h1>Economy of the Baltic States</h1>
+            <p>Welcome to the Baltic States Economy Visualizer using ESRI JavaScript SDK and ChartJS.</p>
+            <p class="header-text">
+                The Baltic countries - Estonia, Latvia and Lithuania - share common features and a similar history.
+                These three countries at the EU border with Russia regained their independence from the Soviet Union
+                in the early nineties before joining the EU in 2004 and more recently, the euro area. They display
+                major similarities in terms of their geography, size, economic structure, development and
+                demography; but also some differences, particularly with respect to Estonia, which is often considered
+                ahead of its peers in some ways.
+                <strong>To start, click on two baltic countries of your choice.</strong> A graph
+                for GDP/capita and a time series for Residential Property Prices will be automatically displayed on the
+                right. <strong>Tap anywhere else on the map to clear your selection.</strong>
+            </p>
+        </div>
+        <div class="container">
+            <div class="map-container">
+                <div id="viewDiv"></div>
+            </div>
+            <div class="chart-container">
+                <div class="chart">
+                    <div id="comparison"></div>
+                    <p>GDP per capita</p>
+                    <div id="desc-1" class="chart-desc">
+                        <p>GDP per capita is the sum of gross value added by all resident producers in the economy plus any product taxes (less subsidies) not included in the valuation of output, divided by mid-year population. Growth is calculated from constant price GDP data in local currency. Sustained economic growth increases average incomes and is strongly linked to poverty reduction. GDP per capita provides a basic measure of the value of output per person, which is an indirect indicator of per capita income. Growth in GDP and GDP per capita are considered broad measures of economic growth.</p>
+                    </div>
+                    <canvas id="gdpChart"></canvas>
+                </div>
+                <div class="chart">
+                    <p>Residential Property Prices Indices (RPPIs)</p>
+                    <div id="desc-2" class="chart-desc">
+                        <p>The Analytical house prices are accessed through the <a
+                            href="https://data.oecd.org/api/" target="_blank">OECD Data API</a>.
+                        Residential Property Prices Indices (RPPIs) – also named House price indices (HPIs), are index numbers
+                        that measure the prices of residential properties over time. RPPIs are key statistics not only for
+                        citizens and households across the world, but also for economic and monetary policy makers. They can
+                        help, for example, to monitor potential macroeconomic imbalances and the risk exposure of the household
+                        and financial sectors.</p>
+                    </div>
+                    <canvas id="hpiChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+<footer>
+    <div class="footer">
+        <p>Sinoj Kokulasingam | Baltic States Economy Visualizer | Positium Task Assignment</p>
+        <p>sinoj.singam@gmail.com</p>
+    </div>
+</footer>
+
+</html>
