@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>Baltics' Economy | Positium Task Assignment</title>
+    <title>Baltics' Economy | GIS Web App</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <center>
+    <center class="body-container">
         <div class="desc-container">
             <h1>Economy of the Baltic States</h1>
             <p>Welcome to the Baltic States Economy Visualizer using ESRI JavaScript SDK and ChartJS.</p>
-            <p class="header-text">
+            <p class="tool-desc">
                 The Baltic countries - Estonia, Latvia and Lithuania - share common features and a similar history.
                 These three countries at the EU border with Russia regained their independence from the Soviet Union
                 in the early nineties before joining the EU in 2004 and more recently, the euro area. They display
@@ -34,16 +34,24 @@
                 <div id="viewDiv"></div>
             </div>
             <div class="chart-container">
-                <div class="chart">
+                <div>
                     <div id="comparison"></div>
-                    <p>GDP per capita</p>
-                    <div id="desc-1" class="chart-desc">
-                        <p>GDP per capita is the sum of gross value added by all resident producers in the economy plus any product taxes (less subsidies) not included in the valuation of output, divided by mid-year population. Growth is calculated from constant price GDP data in local currency. Sustained economic growth increases average incomes and is strongly linked to poverty reduction. GDP per capita provides a basic measure of the value of output per person, which is an indirect indicator of per capita income. Growth in GDP and GDP per capita are considered broad measures of economic growth.</p>
-                    </div>
-                    <canvas id="gdpChart"></canvas>
+                    <p id="prompt-text">Click on two Baltic countries to compare their indices.</p>
                 </div>
+                <h2>GDP per capita</h2>
                 <div class="chart">
-                    <p>Residential Property Prices Indices (RPPIs)</p>
+                    <div id="desc-1" class="chart-desc">
+                        <p>GDP per capita is the sum of gross value added by all resident producers in the economy plus 
+                            any product taxes (less subsidies) not included in the valuation of output, divided by mid-year population. 
+                            Growth is calculated from constant price GDP data in local currency. Sustained economic growth increases 
+                            average incomes and is strongly linked to poverty reduction. GDP per capita provides a basic measure of 
+                            the value of output per person, which is an indirect indicator of per capita income. Growth in GDP and 
+                            GDP per capita are considered broad measures of economic growth.</p>
+                    </div>
+                    <canvas id="gdpChart" class="chart-canvas"></canvas>
+                </div>
+                <h2>Residential Property Prices Indices (RPPIs)</h2>
+                <div class="chart">
                     <div id="desc-2" class="chart-desc">
                         <p>The Analytical house prices are accessed through the <a
                             href="https://data.oecd.org/api/" target="_blank">OECD Data API</a>.
@@ -53,17 +61,12 @@
                         help, for example, to monitor potential macroeconomic imbalances and the risk exposure of the household
                         and financial sectors.</p>
                     </div>
-                    <canvas id="hpiChart"></canvas>
+                    <canvas id="hpiChart" class="chart-canvas"></canvas>
                 </div>
             </div>
         </div>
     </center>
 </body>
-<footer>
-    <div class="footer">
-        <p>Sinoj Kokulasingam | Baltic States Economy Visualizer | Positium Task Assignment</p>
-        <p>sinoj.singam@gmail.com</p>
-    </div>
-</footer>
+
 
 </html>

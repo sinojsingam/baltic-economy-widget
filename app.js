@@ -23,9 +23,20 @@ require(["esri/Map",
     function addDesc() {
         var desc_1 = document.getElementById("desc-1");
         var desc_2 = document.getElementById("desc-2");
-        desc_1.classList.remove("chart-desc-hide"); // display : hide
+        var prompt_text = document.getElementById("prompt-text");
+        desc_1.classList.remove("chart-desc-hide");
         desc_2.classList.remove("chart-desc-hide");
+        prompt_text.classList.remove("chart-desc-hide");
     };
+    // Function to remove the description div
+    function removeDesc() {
+        var desc_1 = document.getElementById("desc-1");
+        var desc_2 = document.getElementById("desc-2");
+        var prompt_text = document.getElementById("prompt-text");
+        desc_1.classList.add("chart-desc-hide");
+        desc_2.classList.add("chart-desc-hide");
+        prompt_text.classList.add("chart-desc-hide");
+    } 
     // Function to clear previous selections
     function clearSelections() {
         gdpChart.destroy(); // Destroy the bar graph
@@ -36,13 +47,6 @@ require(["esri/Map",
         selectedAttributes.length = 0; // Reset selected attributes array
         document.getElementById("comparison").innerHTML = ""; // get rid of the emojis
     };
-    // Function to remove the description div
-    function removeDesc() {
-        var desc_1 = document.getElementById("desc-1");
-        var desc_2 = document.getElementById("desc-2");
-        desc_1.classList.add("chart-desc-hide");
-        desc_2.classList.add("chart-desc-hide");
-    } 
     // I'm using the restcountries API to fetch the flag emojies of the selected countries
     // async function, so that the script can wait for the data to be fetched before adding the emojis
     async function addEmojis(selected_polygons) {
